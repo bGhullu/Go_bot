@@ -2,13 +2,16 @@ package main
 
 import "fmt"
 
-func makeMultiplier(factor int) func(int) int {
-	return func(x int) int {
-		return x * factor
+func counter() func() int {
+	count := 0
+	return func() int {
+		count++
+		return count
 	}
 }
 
 func main() {
-	twice := makeMultiplier(2)
-	fmt.Println(twice(5))
+	next := counter()
+	fmt.Println(next())
+	fmt.Println(next())
 }

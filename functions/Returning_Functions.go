@@ -1,4 +1,3 @@
-package functions
 package main
 
 import "fmt"
