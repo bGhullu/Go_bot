@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+package http
+>>>>>>> bdaa8fe (GO)
 package main
 
 import (
@@ -57,4 +61,8 @@ func main() {
 	fmt.Println("Zip:", p[0].Address["zip"].(string))
 
 	fmt.Println("Alice bio:", bio["Alice"])
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> bdaa8fe (GO)
