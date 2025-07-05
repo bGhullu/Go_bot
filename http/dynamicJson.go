@@ -13,8 +13,8 @@ func main() {
 		"active": true,
 		"scores": [100, 95],
 		"details": {
-		"role": "admin"
-		}
+			"role": "admin"
+			}
 	},
 	{
 		"name": "Rice",
@@ -22,7 +22,7 @@ func main() {
 		"active": false,
 		"scores": [10, 5],
 		"details": {
-		"role": "employee"
+			"role": "employee"
 		}
 	}
 	]`
@@ -39,6 +39,7 @@ func main() {
 		scores := info["scores"].([]interface{})
 		details := info["details"].(map[string]interface{})
 		role := details["role"].(string)
+
 		fmt.Println("\nName:", name)
 		fmt.Println("Age:", age)
 		fmt.Println("Active:", active)
