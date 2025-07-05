@@ -45,5 +45,6 @@ func main() {
 		fmt.Println("First Score:", scores[0])
 		fmt.Println("Role:", role)
 	}
+	fmt.Println("first name:", data[0]["name"].(string))
 
 }

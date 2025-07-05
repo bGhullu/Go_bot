@@ -17,7 +17,8 @@ type Person struct {
 }
 
 func main() {
-	jsonStr := `{
+	jsonStr := `[
+	{
 		"name": "Alice",
 		"age": 30,
 		"address": {
@@ -25,15 +26,28 @@ func main() {
 			"zip": "N10 7AB"
 		}
 	
-	}`
+	},
+	{
+		"name": "Rice",
+		"age": 40,
+		"address": {
+			"city": "Liverpool",
+			"zip": "N13 71B"
+		}
+	
+	}
+		]`
 
-	var p Person
+	var p []Person
 	err := json.Unmarshal([]byte(jsonStr), &p)
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println("Name:", p.Name)
-	fmt.Println("Age:", p.Age)
-	fmt.Println("City:", p.Address.City)
-	fmt.Println("Zip:", p.Address.Zip)
+	for _, info := range p {
+		fmt.Println("Name:", info.Name)
+	}
+	fmt.Println("\nName:", p[0].Name)
+	fmt.Println("Age:", p[0].Age)
+	fmt.Println("City:", p[0].Address.City)
+	fmt.Println("Zip:", p[0].Address.Zip)
 }
