@@ -45,6 +45,6 @@ func main() {
 		panic(err)
 	}
 	for token, priceData := range prices {
-		fmt.Printf("%price: $%.2f\n", token, priceData["usd"])
+		fmt.Printf("%s price: $%.2f\n", token, priceData["usd"])
 	}
 }
